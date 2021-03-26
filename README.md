@@ -1,3 +1,5 @@
+Raspberry pi as bluetooth speaker tutorial or something.
+
 # btcontrol
 Python script for automatic bluetoothctl management in my car audio project
 
