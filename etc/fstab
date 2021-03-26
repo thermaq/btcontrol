@@ -1,0 +1,7 @@
+proc            /proc           proc    defaults          0       0
+#PARTUUID=738a4d67-01  /boot           vfat    defaults          0       2
+/dev/sda2  /               ext4    defaults,noatime,ro  0       1
+/dev/sda3 /var ext4	defaults,noatime 0 0
+tmpfs /tmp tmpfs nodev,nosuid 0 0
+# just like /var, but for my custom pulseaudio
+/dev/sda6 /usr/local/var ext4 defaults,noatime 0 0

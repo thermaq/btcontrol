@@ -1,0 +1,15 @@
+#!/bin/bash -e
+
+echo mounting pi tmpfs
+mount -t tmpfs tmpfs /home/pi
+echo rsync pi template
+rsync -ahAX /home/pi_template/ /home/pi/
+echo chown pi
+chown -R pi:pi /home/pi/
+
+# Raspbian has bluetooth service vendro preset set to enabled. I stop it there so the cpu has more juice for pulseaudio and the equaliser
+systemctl stop bluetooth
+
+# my script getting ip from the network. I uncomment it when working on the system so the rpi is visible from the network after boot.
+# connect
+exit 0

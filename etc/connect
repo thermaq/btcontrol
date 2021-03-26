@@ -1,0 +1,7 @@
+#!/bin/bash
+
+dhclient eth0
+systemctl start ssh
+/usr/local/bin/read_ip 
+ntpdate 0.pl.pool.ntp.org 1.pl.pool.ntp.org 2.pl.pool.ntp.org 3.pl.pool.ntp.org	
+
