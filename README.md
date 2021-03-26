@@ -12,7 +12,7 @@ I use pulseaudio with LADSPA for equalisation which is really needed in a car th
 
 I also had to make a quick and dirty pulseaudio module to restart bluetooth and start the script. Ladspa increased pulseaudio startup time quite a bit and made bluetooth communication with it unreliable during boot up. I also encountered that phone trying to pair with bluetooth that is still trying to talk to pulse renders the whole pairing process moot.
 
-I'll include a script to compile the module later.
+I'll include a script to compile the module later. Also the most reliable version was 13.99, so that's the other reason I compile pulse from scratch.
 
 ## awesome
 
