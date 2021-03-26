@@ -1,0 +1,15 @@
+[Unit]
+Description=Pulseaudio sound server
+After=network.target dbus.service
+
+[Service]
+ExecStartPre=/usr/local/bin/prepare-pulse-env.sh
+ExecStart=/usr/local/bin/pulseaudio --system --disallow-exit --no-cpu-limit --realtime -vvvvv
+#ExecStart=/usr/bin/pulseaudio
+#User=pulse
+#Group=pulse
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
